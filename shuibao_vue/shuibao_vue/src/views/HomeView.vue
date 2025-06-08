@@ -42,12 +42,20 @@ const generateSubmission = async () => {
     const formData = new FormData()
     formData.append('name', paperInfo.value)
     
+    console.log('发送请求的数据:', {
+      url: '/api/shuibao_api',
+      method: 'POST',
+      formData: Object.fromEntries(formData.entries())
+    })
+    
     // 使用fetch API发送请求并处理流式响应
-    const response = await fetch('http://127.0.0.1:5001/shuibao_api', {
+    const response = await fetch('/api/shuibao_api', {
       method: 'POST',
       body: formData
     })
 
+    console.log('服务器响应状态:', response.status, response.statusText)
+    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
