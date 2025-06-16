@@ -1,0 +1,1110 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: 水保
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/ollama:0.0.4@03ff7db65ec6cebcb6065a12b41751f4dbb55c0480a5eb65dbb14e4b9bfe302a
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/siliconflow:0.0.9@d0bed72582f8945dba4bf0fb23e03a449e7319f7cb0056ce02bfc76ca3f08215
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745113986292-source-1745114009550-target
+      selected: false
+      source: '1745113986292'
+      sourceHandle: source
+      target: '1745114009550'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745842473535-source-1745842480688-target
+      selected: false
+      source: '1745842473535'
+      sourceHandle: source
+      target: '1745842480688'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745842649265-source-1745842671787-target
+      selected: false
+      source: '1745842649265'
+      sourceHandle: source
+      target: '1745842671787'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745842764548-source-1745842841818-target
+      selected: false
+      source: '1745842764548'
+      sourceHandle: source
+      target: '1745842841818'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: knowledge-retrieval
+      id: 1745113951458-source-1745113986292-target
+      selected: false
+      source: '1745113951458'
+      sourceHandle: source
+      target: '1745113986292'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745843460728-source-17458436094770-target
+      selected: false
+      source: '1745843460728'
+      sourceHandle: source
+      target: '17458436094770'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745843810132-source-1745843816797-target
+      selected: false
+      source: '1745843810132'
+      sourceHandle: source
+      target: '1745843816797'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745843879592-source-1745846227281-target
+      selected: false
+      source: '1745843879592'
+      sourceHandle: source
+      target: '1745846227281'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1745846291908-source-1745846299250-target
+      selected: false
+      source: '1745846291908'
+      sourceHandle: source
+      target: '1745846299250'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1745114009550-source-1745842473535-target
+      source: '1745114009550'
+      sourceHandle: source
+      target: '1745842473535'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1745842480688-source-1745842649265-target
+      source: '1745842480688'
+      sourceHandle: source
+      target: '1745842649265'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1745842671787-source-1745842764548-target
+      source: '1745842671787'
+      sourceHandle: source
+      target: '1745842764548'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1745842841818-source-1745843460728-target
+      source: '1745842841818'
+      sourceHandle: source
+      target: '1745843460728'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 17458436094770-source-1745843810132-target
+      source: '17458436094770'
+      sourceHandle: source
+      target: '1745843810132'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1745843816797-source-1745843879592-target
+      source: '1745843816797'
+      sourceHandle: source
+      target: '1745843879592'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: knowledge-retrieval
+      id: 1745846227281-source-1745846291908-target
+      source: '1745846227281'
+      sourceHandle: source
+      target: '1745846291908'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1745846299250-source-1745846363454-target
+      source: '1745846299250'
+      sourceHandle: source
+      target: '1745846363454'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - label: name
+          max_length: 256
+          options: []
+          required: true
+          type: text-input
+          variable: name
+      height: 88
+      id: '1745113951458'
+      position:
+        x: -85.43282337734036
+        y: 410.19727783017964
+      positionAbsolute:
+        x: -85.43282337734036
+        y: 410.19727783017964
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 633450a6-bc2e-479c-8717-c0d738725d63
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: weighted_score
+          top_k: 4
+          weights:
+            keyword_setting:
+              keyword_weight: 0.3
+            vector_setting:
+              embedding_model_name: bge-m3:latest
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 0.7
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索
+        type: knowledge-retrieval
+      height: 90
+      id: '1745113986292'
+      position:
+        x: 337
+        y: -58.40699781919453
+      positionAbsolute:
+        x: 337
+        y: -58.40699781919453
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745113986292'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: e2689c51-9d9b-4737-a38f-d5e0e5531375
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中第一章“综合说明”部分{{#context#}}，为该项目撰写新的“综合说明”章节内容。
+
+            你需要仿照样例中“综合说明”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 11 个小节：
+
+            1.项目简况
+
+            2.编制依据
+
+            3.设计水平年
+
+            4.水土流失防治责任范围
+
+            5.水土流失防治目标
+
+            6.项目水土保持评价结论
+
+            7.水土流失预测结果
+
+            8.水土保持措施布设成果
+
+            9.水土保持监测方案
+
+            10.水土保持投资及效益分析成果
+
+            11.结论
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 11 个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“综合说明”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“1.1 项目简况”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第一章，2500字以上'
+        selected: false
+        title: LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745114009550'
+      position:
+        x: 621
+        y: -50.99999999999997
+      positionAbsolute:
+        x: 621
+        y: -50.99999999999997
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 361546f0-9277-4f8a-b3d9-2b2379a3be19
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 2
+        type: knowledge-retrieval
+      height: 90
+      id: '1745842473535'
+      position:
+        x: 337
+        y: 84.00000000000003
+      positionAbsolute:
+        x: 337
+        y: 84.00000000000003
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745842473535'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: fb5a359a-7803-43dc-ae37-b13237b3bbee
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中第二章“项目概况”部分的内{{#context#}}，为该项目撰写新的“项目概况”章节内容。
+
+            你需要仿照样例中“项目概况”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 9个小节：
+
+            1 项目概况
+
+            2 项目组成及工程布置
+
+            3 环境整治工程
+
+            4 施工组织
+
+            5 工程占地
+
+            6 土石方量与土石方平衡
+
+            7 拆迁（移民）安置与专项设施改（迁）建
+
+            8 施工进度
+
+            9 自然概况
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 9个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“项目概况”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“2.1 项目简况”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第二章，2500字以上'
+        selected: false
+        title: LLM 2
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745842480688'
+      position:
+        x: 628.5815434344196
+        y: 84.00000000000003
+      positionAbsolute:
+        x: 628.5815434344196
+        y: 84.00000000000003
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 9034be96-b0a6-4888-bf48-cbb3dcac8491
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 3
+        type: knowledge-retrieval
+      height: 90
+      id: '1745842649265'
+      position:
+        x: 337
+        y: 237.4471474864979
+      positionAbsolute:
+        x: 337
+        y: 237.4471474864979
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745842649265'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: 6742a8d4-cfe4-433e-88cb-bb055bdf6e29
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中第三章“水土保持评价”部分的内容与写作风格{{#context#}}，为该项目撰写新的“项目水土保持评价”章节内容。
+
+            你需要仿照样例中“水土保持评价”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 3个小节：
+
+            3 项目水土保持评价
+
+            3.1主体工程选址（线）水土保持制约性因素分析与评价
+
+            3.2建设方案与布局水土保持评价
+
+            3.3主体工程设计中水土保持措施界定
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 79个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“3.1 项目水土保持评价”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第三章，2500字以上'
+        selected: false
+        title: LLM 3
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745842671787'
+      position:
+        x: 628.5815434344196
+        y: 237.4471474864979
+      positionAbsolute:
+        x: 628.5815434344196
+        y: 237.4471474864979
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 55234ca9-ffc7-41c3-ba40-9cf84ec87d42
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 4
+        type: knowledge-retrieval
+      height: 90
+      id: '1745842764548'
+      position:
+        x: 337
+        y: 395.6695233042999
+      positionAbsolute:
+        x: 337
+        y: 395.6695233042999
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745842764548'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: 9d6bb7ea-dc4f-4491-a8a0-03bc9b6fa026
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中“水土流失分析与预测”部分的内容与写作风格{{#context#}}，为该项目撰写新的“水土流失分析与预测”章节内容。
+
+            你需要仿照样例中“水土流失分析与预测”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 5个小节：
+
+            4 项目水土保持评价
+
+            4.1水土流失现状
+
+            4.2 水土流失影响因素分析
+
+            4.3 水土流失量预测
+
+            4.4 可能造成的水土流失危害分析
+
+            4.5 指导性意见
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 5个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“水土流失分析与预测”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“4.1水土流失现状”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第四章，2500字以上'
+        selected: false
+        title: LLM 4
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745842841818'
+      position:
+        x: 628.5815434344196
+        y: 395.6695233042999
+      positionAbsolute:
+        x: 628.5815434344196
+        y: 395.6695233042999
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 981968e2-a03f-4a8e-9c36-fb3695818f5e
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 5
+        type: knowledge-retrieval
+      height: 90
+      id: '1745843460728'
+      position:
+        x: 330.83246903735255
+        y: 535.3537247257128
+      positionAbsolute:
+        x: 330.83246903735255
+        y: 535.3537247257128
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745843460728'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: 9d6bb7ea-dc4f-4491-a8a0-03bc9b6fa026
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中“水土保持措施”部分的内容与写作风格{{#context#}}，为该项目撰写新的“水土保持措施”章节内容。
+
+            你需要仿照样例中“水土保持措施”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 4个小节：
+
+            5 水土保持措施
+
+            5.1 防治区划分
+
+            5.2 措施总体布局
+
+            5.3 分区措施布设
+
+            5.4 施工要求
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 4个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“水土保持措施”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“5.1 防治区划分”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第五章，2500字以上'
+        selected: false
+        title: LLM 5
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '17458436094770'
+      position:
+        x: 628.5815434344196
+        y: 535.3537247257128
+      positionAbsolute:
+        x: 628.5815434344196
+        y: 535.3537247257128
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 7d581387-ae37-46ac-8b19-b4fe42c59d08
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 6
+        type: knowledge-retrieval
+      height: 90
+      id: '1745843810132'
+      position:
+        x: 324.312693781452
+        y: 682.3345249056703
+      positionAbsolute:
+        x: 324.312693781452
+        y: 682.3345249056703
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745843810132'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: 6e79358b-cdc8-4062-a172-e816a709ebf6
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中“水土保持监测”部分的内容与写作风格{{#context#}}，为该项目撰写新的“水土保持监测”章节内容。
+
+            你需要仿照样例中“水土保持监测”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 4个小节：
+
+            6 水土保持监测
+
+            6.1 监测范围与时段
+
+            6.2 监测内容及方法
+
+            6.3 点位布设
+
+            6.4 实施条件和成果
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 4个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“水土保持监测”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“6.1 监测范围与时段”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第六章，必须在2500字以上'
+        selected: false
+        title: LLM 6
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745843816797'
+      position:
+        x: 628.5815434344196
+        y: 682.3345249056703
+      positionAbsolute:
+        x: 628.5815434344196
+        y: 682.3345249056703
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 7e9aab55-96c1-48a1-9120-fe12ff568496
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 7
+        type: knowledge-retrieval
+      height: 90
+      id: '1745843879592'
+      position:
+        x: 316.6895306290496
+        y: 823.7461038451402
+      positionAbsolute:
+        x: 316.6895306290496
+        y: 823.7461038451402
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745843879592'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: f9af44d4-40aa-4a15-aac9-0a7c30c93d3c
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中“水土保持投资估算及效益分析”部分的内容与写作风格{{#context#}}，为该项目撰写新的“水土保持投资估算及效益分析”章节内容。
+
+            你需要仿照样例中“水土保持投资估算及效益分析”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下 两个小节：
+
+            7 水土保持投资估算及效益分析
+
+            7.1 投资估算
+
+            7.2 效益分析
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 2个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“水土保持投资估算及效益分析”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“7.1 投资估算”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第七章，必须在2500字以上'
+        selected: false
+        title: LLM 7
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745846227281'
+      position:
+        x: 628.5815434344196
+        y: 823.7461038451402
+      positionAbsolute:
+        x: 628.5815434344196
+        y: 823.7461038451402
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 10031e68-b50a-49f8-92ce-468a7cf095b6
+        desc: ''
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: reranking_model
+          reranking_model:
+            model: netease-youdao/bce-reranker-base_v1
+            provider: langgenius/siliconflow/siliconflow
+          top_k: 4
+        query_variable_selector:
+        - '1745113951458'
+        - name
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索 8
+        type: knowledge-retrieval
+      height: 90
+      id: '1745846291908'
+      position:
+        x: 316.6895306290496
+        y: 953.851384935728
+      positionAbsolute:
+        x: 316.6895306290496
+        y: 953.851384935728
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1745846291908'
+          - result
+        desc: ''
+        model:
+          completion_params: {}
+          mode: chat
+          name: Qwen/Qwen2.5-72B-Instruct-128K
+          provider: langgenius/siliconflow/siliconflow
+        prompt_template:
+        - id: 707b8b2d-ffb4-4877-9617-f373b9df19fe
+          role: system
+          text: '你是一位具备多年经验的水土保持方案编写专家。现在用户希望你根据提供的项目资料，参考知识库中已有水保方案中“水土保持管理”部分的内容与写作风格{{#context#}}，为该项目撰写新的“水土保持管理”章节内容。
+
+            你需要仿照样例中“水土保持管理”部分的结构、逻辑与专业语言，结合当前项目资料，撰写本项目的综合说明章节，内容应包括以下6个小节：
+
+            8 水土保持管理
+
+            8.1 组织管理
+
+            8.2 后续设计
+
+            8.3 水土保持监测
+
+            8.4 水土保持监理
+
+            8.5 水土保持施工
+
+            8.6 水土保持设施验收
+
+            输出要求：
+
+            结构完整、条理清晰，依次对应上述 6个子章节；
+
+            内容规范、用词准确、风格正式；
+
+            严格参考知识库中“水土保持管理”部分的写作方式；
+
+            所有结论和数据必须紧密结合当前项目资料，不可凭空编造；
+
+            章节标题请使用“8.1 组织管理”这种格式标明。
+
+            现在开始生成{{#1745113951458.name#}}的第八章，必须在2500字以上'
+        selected: false
+        title: LLM 8
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 88
+      id: '1745846299250'
+      position:
+        x: 638.2809561748494
+        y: 953.851384935728
+      positionAbsolute:
+        x: 638.2809561748494
+        y: 953.851384935728
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1745114009550'
+          - text
+          variable: text1
+        - value_selector:
+          - '1745842480688'
+          - text
+          variable: text2
+        - value_selector:
+          - '1745842671787'
+          - text
+          variable: text3
+        - value_selector:
+          - '1745842841818'
+          - text
+          variable: text4
+        - value_selector:
+          - '17458436094770'
+          - text
+          variable: text5
+        - value_selector:
+          - '1745843816797'
+          - text
+          variable: text6
+        - value_selector:
+          - '1745846227281'
+          - text
+          variable: text7
+        - value_selector:
+          - '1745846299250'
+          - text
+          variable: text8
+        selected: true
+        title: 结束
+        type: end
+      height: 270
+      id: '1745846363454'
+      position:
+        x: 1086.4911011711038
+        y: 347.7084466587661
+      positionAbsolute:
+        x: 1086.4911011711038
+        y: 347.7084466587661
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: 514.4552688325392
+      y: -114.6678335848965
+      zoom: 0.5832645007480962
